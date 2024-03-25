@@ -70,5 +70,5 @@ Integrates New Zealand legislation with OpenAI Custom GPTs, offering streamlined
 
 
 ## Conclusion
-Embed offers comprehensive tools for creating, integrating, and optimizing chatbots, ensuring they remain valuable user resources. For further information, [contact us](/contact).
+Embed offers comprehensive tools for creating, integrating, and optimizing chatbots, ensuring they remain valuable user resources. For further information.
 

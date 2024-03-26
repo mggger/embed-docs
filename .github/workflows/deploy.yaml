@@ -1,0 +1,42 @@
+name: Deploy Python
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Set to 0 to fetch all history for all branches and tags
+
+      - name: Setup Python Environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+
+      - name: Find Modified Markdown Files
+        id: modified_md_files
+        run: |
+          # Find modified .md files in docs directory since last commit
+          MD_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} -- 'docs/*.md')
+          # Replace newline characters with commas
+          MD_FILES_CSV=$(echo $MD_FILES | tr '\n' ',')
+          # Remove the trailing comma
+          MD_FILES_CSV=${MD_FILES_CSV%,}
+          echo "::set-output name=md_files::$MD_FILES_CSV"
+          echo "Modified Markdown Files: $MD_FILES_CSV"
+
+      - name: Install Dependencies and Package Application
+        run: |
+          pip install -r scripts/requirements.txt
+          echo "Dependencies installed."
+
+      - name: Run Train Markdown with Modified Files
+        run: |
+          python3 scripts/train_markdown.py ${{ steps.modified_md_files.outputs.md_files }}

@@ -1,0 +1,6 @@
+langchain-community==0.0.27
+langchain-text-splitters==0.0.1
+sqlalchemy==2.0.0
+pypdf==4.1.0
+requests
+unstructured

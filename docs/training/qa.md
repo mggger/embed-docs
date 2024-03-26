@@ -18,7 +18,7 @@ For batch training of Q&A, you can opt for batch mode where the question corresp
 ```json
 [
   {"description":  "what's your name", "text": "Embed"},
-  {"description":  "Where are you", "text": "Online Service"},
+  {"description":  "Where are you", "text": "Online"},
   ...
 ]
 

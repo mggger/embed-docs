@@ -4,3 +4,4 @@ sqlalchemy==2.0.0
 pypdf==4.1.0
 requests
 unstructured
+markdown

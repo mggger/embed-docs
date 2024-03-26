@@ -72,6 +72,12 @@ const config = {
             label: 'Tutorial',
           },
           {
+            href: 'https://embed.gptdevelopment.online/login',
+            label: 'Back To Embed',
+            position: 'right',
+          },
+
+          {
             href: 'https://github.com/mggger/embed-docs',
             label: 'GitHub',
             position: 'right',

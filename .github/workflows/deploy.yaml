@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: dev  # Specify the environment name if you have environment-specific secrets
 
     steps:
       - name: Checkout Repository
@@ -38,5 +39,7 @@ jobs:
           echo "Dependencies installed."
 
       - name: Run Train Markdown with Modified Files
+        env:
+          USER_TOKEN: ${{ secrets.USER_TOKEN }}  # Set USER_TOKEN as an environment variable for this step
         run: |
           python3 scripts/train_markdown.py ${{ steps.modified_md_files.outputs.md_files }}

@@ -7,7 +7,7 @@ Embed allows for the straightforward training of routine questions and answers. 
 
 ![Embed-Intro](/img/embed/train_qa.png)
 
-Please be aware of certain limitations with Embed. Since data is stored using 768-dimensional vectors, it's advisable to keep both questions and answers under 768 characters, with a current limit set at 600 characters.
+The label is used to filter the train records, it is optional.
 
 
 ## Batch Training for Q&A
@@ -17,8 +17,8 @@ For batch training of Q&A, you can opt for batch mode where the question corresp
 
 ```json
 [
-  {"description":  "what's your name", "text": "Embed"},
-  {"description":  "Where are you", "text": "Online"},
+  {"description":  "what's your name", "text": "Embed", "lebal":  "1"},
+  {"description":  "Where are you", "text": "Online", "label":  "2"},
   ...
 ]
 

@@ -16,5 +16,5 @@ Please note there are some limitations; only files smaller than 20MB can be trai
 
 To upload a file, simply click the upload button. (See image: Upload File)
 
-![Embed-Intro](/img/embed/intro.png)
+![Embed-Intro](/img/embed/upload_file.png)
 

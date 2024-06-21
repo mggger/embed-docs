@@ -25,7 +25,7 @@ Defines the system prompt for this chatbot.
 
 We currently support three models:
 
-- **llama-2-7b-chat-int8** (temporarily free, the conversation effect is inferior to gpt3.5, gpt4)
+- **llama-3-8b** (temporarily free)
 - **gpt-3.5-turbo** (requires an OpenAI API key)
 - **gpt-4-0125-preview** (requires an OpenAI API key)
 
